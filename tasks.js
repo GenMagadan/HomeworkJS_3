@@ -16,14 +16,33 @@
 // данного числа и выводит в консоль текст "Размер заработной платы за вычетом
 // налогов равен значение"
 
-let wage = parseInt(prompt('Введите нужную сумму'));
+// let wage = parseInt(prompt('Введите нужную сумму'));
 
-let netProfit = function (wage) {
-   if (isNaN(wage)) {
-      return alert('Значение задано неверно');
-   } else {
-      return alert(`Размер заработной платы за вычетом налогов равен ${wage * 0.87}`)
+// let netProfit = function (wage) {
+//    if (isNaN(wage)) {
+//       return alert('Значение задано неверно');
+//    } else {
+//       return alert(`Размер заработной платы за вычетом налогов равен ${wage * 0.87}`)
+//    }
+// }
+// netProfit(wage);
+
+// Задание 3
+// Пользователь с клавиатуры вводит 3 числа, необходимо создать функцию, которая определяет максимальное значение среди этих чисел
+
+let number1 = parseInt(prompt('Введите первое число'));
+let number2 = parseInt(prompt('Введите второе число'));
+let number3 = parseInt(prompt('Введите третье число'));
+
+let maxNumber = function (a, b, c) {
+   let max = a;
+   if (max < b) {
+      max = b;
    }
+   if (max < c) {
+      max = c
+   }
+   return max;
 }
-netProfit(wage);
+alert(`Максимальное значение = ${maxNumber(number1, number2, number3)}`);
 
